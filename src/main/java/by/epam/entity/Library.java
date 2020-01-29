@@ -7,20 +7,7 @@ public class Library implements Serializable {
 
     private Catalog catalog;
 
-    private static Library instance;
-
     public Library() {}
-
-//    public Library(Catalog catalog) {
-//        this.catalog = catalog;
-//    }
-
-    public static Library getInstance() {
-        if (instance == null) {
-            return new Library();
-        }
-        return instance;
-    }
 
     public Catalog getCatalog() {
         return catalog;

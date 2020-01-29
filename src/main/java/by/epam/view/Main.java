@@ -1,43 +1,57 @@
 package by.epam.view;
 
-import by.epam.controller.CommandProvider;
-import by.epam.controller.command.Command;
+import by.epam.controller.Controller;
 
 import java.util.Scanner;
 
 public class Main {
+    private final String ERROR_MESSAGE = "This command doesn't exist";
+
+
+
     public static void main(String[] args) {
         System.out.println("Choose the command you want to execute.");
-        System.out.println("1 - sing in" + "/n" +
+        System.out.println("1 - sign in" + "/n" +
                 "2 - register" + "/n" +
                 "3 - add a book to the catalog" + "/n" +
-                "4 - change info of a book" + "/n" +
-                "5 - delete a book from the catalog");
+                "4 - delete a book from the catalog" + "/n" +
+                "5 - change info about the author" + "/n" +
+                "6 - change info about the name" + "/n" +
+                "7 - change info about the year" + "/n");
         Scanner scanner = new Scanner(System.in);
-        String choice = scanner.nextLine();
-
-        CommandProvider commandProvider = new CommandProvider();
-        Command command;
-
-        switch (choice) {
-            case "1":
-                command = commandProvider.getCommand("sign_in");
-                break;
-            case "2":
-                command = commandProvider.getCommand("registration");
-                break;
-            case "3":
-                command = commandProvider.getCommand("add_book");
-                break;
-            case "4":
-                command = commandProvider.getCommand("delete_book");
-                break;
-            case "5":
-                command = commandProvider.getCommand("change_info");
-                break;
-            default:
-                command = commandProvider.getCommand("wrong_request");
+        Controller controller = new Controller();
+        boolean isRunning = true;
+        while (isRunning) {
+            String choice = scanner.nextLine();
+            switch (choice) {
+                case "1":
+                    signIn();
+                    break;
+                case "2":
+                    register();
+                    break;
+                case "3":
+                    addBook();
+                    break;
+                case "4":
+                    deleteBook();
+                    break;
+                case "5":
+                    changeAuthor();
+                    break;
+                case "6":
+                    changeName();
+                    break;
+                case "7":
+                    changeYear();
+                    break;
+                case "8":
+                    isRunning = false;
+                    System.out.println("");
+                    break;
+                default:
+                    System.out.println(ERROR_MESSAGE);
+                    break;
+            }
         }
-        System.out.println(command.execute());
     }
-}

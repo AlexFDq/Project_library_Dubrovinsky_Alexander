@@ -8,6 +8,7 @@ public class Book implements Serializable {
     private int year;
     private String name;
     private String author;
+    private int id;
 
     public Book() {
     }
@@ -36,6 +37,14 @@ public class Book implements Serializable {
         this.author = author;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -58,8 +67,8 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return getClass().getName() +
-                "@" + "year = " + year +
+        return getClass().getName() + "@" +
+                "year = " + year +
                 "name = " + name +
                 "author" + author;
     }

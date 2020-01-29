@@ -16,6 +16,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VUdHJwTyBUULAJDjrFv6ZLzAy7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,11 +29,31 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/bsuir-javaweb-master" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.epam.view.Main" />
+      <module name="Project_library_Dubrovinsky_Alexander" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -68,6 +91,12 @@
       <workItem from="1579875689200" duration="1449000" />
       <workItem from="1579976162599" duration="2602000" />
       <workItem from="1580032786386" duration="7366000" />
+      <workItem from="1580080742184" duration="3066000" />
+      <workItem from="1580110061503" duration="4837000" />
+      <workItem from="1580157810933" duration="922000" />
+      <workItem from="1580159937711" duration="857000" />
+      <workItem from="1580198903546" duration="10521000" />
+      <workItem from="1580281477734" duration="8997000" />
     </task>
     <servers />
   </component>
@@ -75,33 +104,49 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Notifications" timestamp="1580160195230">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1580160195230" />
     <state x="552" y="177" key="#Project_Structure" timestamp="1579278495423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="177" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1579278495423" />
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1578927007827">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1580290690550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1578927007827" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579285276789">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580290690550" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580292508486">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579285276789" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1579619990781">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580292508486" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1580281692719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579619990781" />
-    <state x="461" y="161" key="SettingsEditor" timestamp="1577311848438">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580281692719" />
+    <state x="461" y="161" key="SettingsEditor" timestamp="1580160127125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577311848438" />
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580160127125" />
+    <state x="690" y="287" key="extract.method.dialog" timestamp="1580287696648">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="287" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580287696648" />
+    <state x="726" y="385" key="git4idea.rebase.GitRebaseDialog" timestamp="1580158740855">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="726" y="385" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580158740855" />
+    <state x="707" y="415" key="git4idea.ui.GitResetDialog" timestamp="1580159995285">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="707" y="415" key="git4idea.ui.GitResetDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580159995285" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1580073866330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580073866330" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579016128514">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580207246170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579016128514" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580207246170" />
   </component>
 </project>

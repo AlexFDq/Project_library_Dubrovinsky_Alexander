@@ -1,5 +1,8 @@
 package by.epam.controller.command;
 
+import by.epam.bean.Request;
+import by.epam.bean.Response;
+
 public interface Command {
-    String execute();
+    Response execute(Request request);
 }

@@ -1,11 +1,9 @@
 package by.epam.service;
 
-import by.epam.service.exception.ReaderException;
+import by.epam.entity.Reader;
+import by.epam.service.exception.ServiceException;
 
-public class ReaderService {
-    public void signIn(String login, String password) throws ReaderException {
-        if (login == null || password == null) {
-            throw new ReaderException("login or password equals null");
-        }
-    }
+public interface ReaderService {
+    void signIn(String login, String password) throws ServiceException;
+    void register(Reader reader) throws ServiceException;
 }

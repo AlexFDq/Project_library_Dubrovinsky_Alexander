@@ -1,4 +1,5 @@
 package by.epam.service;
 
-public class CatalogService {
+public interface CatalogService {
+
 }

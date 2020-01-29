@@ -15,20 +15,12 @@ public class CommandProvider {
         repository.put(CommandName.REGISTRATION, new Registration());
         repository.put(CommandName.ADD_BOOK, new AddBook());
         repository.put(CommandName.DELETE_BOOK, new DeleteBook());
-        repository.put(CommandName.CHANGE_INFO, new ChangeInfo());
-        repository.put(CommandName.WRONG_REQUEST, new WrongRequest());
+        repository.put(CommandName.CHANGE_AUTHOR, new ChangeAuthor());
+        repository.put(CommandName.CHANGE_NAME, new ChangeName());
+        repository.put(CommandName.CHANGE_YEAR, new ChangeYear());
     }
 
-    public Command getCommand(String name) {
-        CommandName commandName;
-        Command command;
-
-        try {
-            commandName = CommandName.valueOf(name.toUpperCase());
-            command = repository.get(commandName);
-        } catch (IllegalArgumentException | NullPointerException e) {
-            command = repository.get(CommandName.WRONG_REQUEST);
-        }
-        return command;
+    public Command getCommand(CommandName commandName) {
+        return repository.get(commandName);
     }
 }
