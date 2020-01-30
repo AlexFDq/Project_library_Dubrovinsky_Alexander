@@ -1,5 +1,8 @@
 package by.epam.service.impl;
 
+import by.epam.dao.BookDao;
+import by.epam.dao.exception.DaoException;
+import by.epam.dao.factory.DaoFactory;
 import by.epam.entity.Book;
 import by.epam.service.BookService;
 import by.epam.service.exception.ServiceException;
@@ -19,42 +22,69 @@ public class BookServiceImpl implements BookService {
         if (book.getYear() <= 0) {
             throw new ServiceException("Incorrect year info");
         }
+
+        try {
+            DaoFactory daoObjectFactory = DaoFactory.getInstance();
+            BookDao bookDao = daoObjectFactory.getBookDao();
+            bookDao.addBook(book);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
     }
 
     @Override
     public void deleteBook(int bookId) throws ServiceException {
-        if (bookId <= 0) {
-            throw new ServiceException("Incorrect book id");
+        try {
+            DaoFactory daoObjectFactory = DaoFactory.getInstance();
+            BookDao bookDao = daoObjectFactory.getBookDao();
+            bookDao.deleteBook(bookId);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
         }
     }
 
     @Override
     public void changeAuthor(int bookId, String author) throws ServiceException {
-        if (bookId <= 0) {
-            throw new ServiceException("Incorrect book id");
-        }
         if (author == null || author.isEmpty()) {
             throw new ServiceException("Incorrect author's name");
+        }
+
+        try {
+            DaoFactory daoObjectFactory = DaoFactory.getInstance();
+            BookDao bookDao = daoObjectFactory.getBookDao();
+            bookDao.changeAuthor(bookId, author);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
         }
     }
 
     @Override
     public void changeName(int bookId, String name) throws ServiceException {
-        if (bookId <= 0) {
-            throw new ServiceException("Incorrect book id");
-        }
         if (name == null || name.isEmpty()) {
             throw new ServiceException("Incorrect book name");
+        }
+
+        try {
+            DaoFactory daoObjectFactory = DaoFactory.getInstance();
+            BookDao bookDao = daoObjectFactory.getBookDao();
+            bookDao.changeName(bookId, name);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
         }
     }
 
     @Override
     public void changeYear(int bookId, int year) throws ServiceException {
-        if (bookId <= 0) {
-            throw new ServiceException("Incorrect book id");
-        }
         if (year <= 0) {
             throw new ServiceException("Incorrect book year");
+        }
+
+        try {
+            DaoFactory daoObjectFactory = DaoFactory.getInstance();
+            BookDao bookDao = daoObjectFactory.getBookDao();
+            bookDao.changeYear(bookId, year);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
         }
     }
 }

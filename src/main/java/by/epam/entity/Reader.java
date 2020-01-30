@@ -1,22 +1,12 @@
 package by.epam.entity;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Reader implements Serializable {
     private static final long serialVersionUID = 4L;
 
-    private String name;
     private String login;
     private String password;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getLogin() {
         return login;
@@ -43,17 +33,20 @@ public class Reader implements Serializable {
             return false;
         }
         Reader reader = (Reader) obj;
-        return this.name.equals(reader.name);
+        return this.login.equals(reader.login) &&
+                this.password.equals(reader.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return 31 + (login == null ? 0 : login.hashCode()) +
+                    (password == null ? 0 : password.hashCode());
     }
 
     @Override
     public String toString() {
         return getClass().getName() + "@" +
-                "name = " + name;
+                "login = " + login +
+                "password = " + password;
     }
 }

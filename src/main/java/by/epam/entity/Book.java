@@ -56,13 +56,15 @@ public class Book implements Serializable {
         Book book = (Book) obj;
         return (this.year == book.year) &&
                 (this.author.equals(book.author)) &&
-                (this.name.equals(book.name));
+                (this.name.equals(book.name)) &&
+                (this.id == book.id);
     }
 
     @Override
     public int hashCode() {
-        return 31 * year + (name == null ? 0 : name.hashCode())
-                + (author == null ? 0 : author.hashCode());
+        return 31 * year * id +
+                (name == null ? 0 : name.hashCode()) +
+                (author == null ? 0 : author.hashCode());
     }
 
     @Override
@@ -70,6 +72,7 @@ public class Book implements Serializable {
         return getClass().getName() + "@" +
                 "year = " + year +
                 "name = " + name +
-                "author" + author;
+                "author" + author +
+                "id = " + id;
     }
 }

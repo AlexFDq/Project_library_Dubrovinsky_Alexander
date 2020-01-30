@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_221" class="java.beans.XMLDecoder">
+    <object class="java.util.ArrayList">
+        <void method="add">
+            <object class="by.epam.entity.Book">
+                <void property="year">
+                    <int>1987</int>
+                </void>
+                <void property="name">
+                    <string>The old man and the sea</string>
+                </void>
+                <void property="author">
+                    <string>Ernest Hemmingway</string>
+                </void>
+                <void property="id">
+                    <int>1</int>
+                </void>
+            </object>
+        </void>
+        <void method="add">
+            <object class="by.epam.entity.Book">
+                <void property="year">
+                    <int>1985</int>
+                </void>
+                <void property="name">
+                    <string>Peter Pan</string>
+                </void>
+                <void property="author">
+                    <string>J.M. Barrie</string>
+                </void>
+                <void property="id">
+                    <int>2</int>
+                </void>
+            </object>
+        </void>
+        <void method="add">
+            <object class="by.epam.entity.Book">
+                <void property="year">
+                    <int>2000</int>
+                </void>
+                <void property="name">
+                    <string>Thirteen Reasons Why</string>
+                </void>
+                <void property="author">
+                    <string>Jay Asher</string>
+                </void>
+                <void property="id">
+                    <int>3</int>
+                </void>
+            </object>
+        </void>
+        <void method="add">
+            <object class="by.epam.entity.Book">
+                <void property="year">
+                    <int>1981</int>
+                </void>
+                <void property="name">
+                    <string>The House On Mango Street</string>
+                </void>
+                <void property="author">
+                    <string>Sandra Cisneros</string>
+                </void>
+                <void property="id">
+                    <int>4</int>
+                </void>
+            </object>
+        </void>
+        <void method="add">
+            <object class="by.epam.entity.Book">
+                <void property="year">
+                    <int>1992</int>
+                </void>
+                <void property="name">
+                    <string>The Outsiders</string>
+                </void>
+                <void property="author">
+                    <string>S.E. Hinton</string>
+                </void>
+                <void property="id">
+                    <int>5</int>
+                </void>
+            </object>
+        </void>
+        <void method="add">
+            <object class="by.epam.entity.Book">
+                <void property="year">
+                    <int>2002</int>
+                </void>
+                <void property="name">
+                    <string>Mieko and the Fifth Treasure</string>
+                </void>
+                <void property="author">
+                    <string>Eleanor Coerr</string>
+                </void>
+                <void property="id">
+                    <int>6</int>
+                </void>
+            </object>
+        </void>
+    </object>
+</java>

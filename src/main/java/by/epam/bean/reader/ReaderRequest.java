@@ -6,14 +6,6 @@ import by.epam.entity.Reader;
 public class ReaderRequest extends Request {
     private Reader reader = new Reader();
 
-    public String getName() {
-        return reader.getName();
-    }
-
-    public void setName(String name) {
-        this.reader.setName(name);
-    }
-
     public String getLogin() {
         return reader.getLogin();
     }
