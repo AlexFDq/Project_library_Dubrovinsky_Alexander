@@ -3,7 +3,7 @@ package by.epam.entity;
 import java.io.Serializable;
 
 public class Reader implements Serializable {
-    private static final long serialVersionUID = 4L;
+    private static final long serialVersionUID = 1L;
 
     private String login;
     private String password;

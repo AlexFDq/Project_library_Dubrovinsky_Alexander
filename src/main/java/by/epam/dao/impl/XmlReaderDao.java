@@ -14,10 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XmlReaderDao implements ReaderDao {
+    private final String READERS_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\readers.xml";
+    private final String AUTH_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\authorization.xml";
+
     private List<Reader> readers = new ArrayList<>();
     private Reader authUser;
-    private String readersPath = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\readers.xml";
-    private String authPath = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\authorization.xml";
 
     @Override
     public void signIn(String login, String password) throws DaoException {
@@ -45,7 +46,7 @@ public class XmlReaderDao implements ReaderDao {
     }
 
     private void serialize() throws DaoException {
-        try (FileOutputStream fos = new FileOutputStream(readersPath)) {
+        try (FileOutputStream fos = new FileOutputStream(READERS_PATH)) {
             XMLEncoder encoder = new XMLEncoder(fos);
             encoder.writeObject(readers);
             encoder.close();
@@ -57,7 +58,7 @@ public class XmlReaderDao implements ReaderDao {
     }
 
     private void serializeAuth() throws DaoException{
-        try (FileOutputStream fos = new FileOutputStream(authPath)) {
+        try (FileOutputStream fos = new FileOutputStream(AUTH_PATH)) {
             XMLEncoder encoder = new XMLEncoder(fos);
             encoder.writeObject(authUser);
             encoder.close();
@@ -69,7 +70,7 @@ public class XmlReaderDao implements ReaderDao {
     }
 
     private void deserialize() throws DaoException {
-        try (FileInputStream fis = new FileInputStream(readersPath)){
+        try (FileInputStream fis = new FileInputStream(READERS_PATH)){
             XMLDecoder decoder = new XMLDecoder(fis);
             readers = (List<Reader>)decoder.readObject();
             decoder.close();

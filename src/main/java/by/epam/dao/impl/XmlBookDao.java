@@ -15,9 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XmlBookDao implements BookDao {
+    private final String BOOK_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\books.xml";
+    private final String AUTH_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\authorization.xml";
+
     private List<Book> books = new ArrayList<>();
-    private String bookPath = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\books.xml";
-    private String authPath = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\authorization.xml";
     private Reader authReader;
 
     @Override
@@ -113,7 +114,7 @@ public class XmlBookDao implements BookDao {
     }
 
     private void serialize() throws DaoException {
-        try (FileOutputStream fos = new FileOutputStream(bookPath)) {
+        try (FileOutputStream fos = new FileOutputStream(BOOK_PATH)) {
             XMLEncoder encoder = new XMLEncoder(fos);
             encoder.writeObject(books);
             encoder.close();
@@ -125,7 +126,7 @@ public class XmlBookDao implements BookDao {
     }
 
     private void deserialize() throws DaoException {
-        try (FileInputStream fis = new FileInputStream(bookPath)) {
+        try (FileInputStream fis = new FileInputStream(BOOK_PATH)) {
             XMLDecoder decoder = new XMLDecoder(fis);
             books = (List<Book>) decoder.readObject();
             decoder.close();
@@ -137,7 +138,7 @@ public class XmlBookDao implements BookDao {
     }
 
     private void deserializeAuth() throws DaoException {
-        try (FileInputStream fis = new FileInputStream(authPath)) {
+        try (FileInputStream fis = new FileInputStream(AUTH_PATH)) {
             XMLDecoder decoder = new XMLDecoder(fis);
             authReader = (Reader) decoder.readObject();
             decoder.close();
