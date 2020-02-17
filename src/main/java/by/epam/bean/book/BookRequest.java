@@ -3,7 +3,9 @@ package by.epam.bean.book;
 import by.epam.bean.Request;
 import by.epam.entity.Book;
 
-public class BookRequest extends Request {
+public class BookRequest extends Request {// перебор у тебя с логикой
+    // делать объект для перености другого объекта с полным дуляжом методов - поолный перебор
+    // и если уже делаешь bean-классы - соблюдай для них все правила - где Serializable, equals, hashCode?
     private Book book = new Book();
 
     public int getYear() {
