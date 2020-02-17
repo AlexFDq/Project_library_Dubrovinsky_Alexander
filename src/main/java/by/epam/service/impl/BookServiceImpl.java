@@ -7,6 +7,8 @@ import by.epam.entity.Book;
 import by.epam.service.BookService;
 import by.epam.service.exception.ServiceException;
 
+// валидатор, все-таки, желательно писать отдельно
+// если у тебя в книге будет 100 полей - замучаешься код логики среди валидационного искать
 public class BookServiceImpl implements BookService {
     @Override
     public void addBook(Book book) throws ServiceException {
