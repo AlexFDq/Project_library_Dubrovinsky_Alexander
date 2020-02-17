@@ -18,8 +18,8 @@ public class XmlBookDao implements BookDao {
     private final String BOOK_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\books.xml";
     private final String AUTH_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\authorization.xml";
 
-    private List<Book> books = new ArrayList<>();
-    private Reader authReader;
+    private List<Book> books = new ArrayList<>();// на занятии я объясняла, почему использование полей экземпляра класса здесь является ошибкой
+    private Reader authReader;// а это поле как-то сообще не к месту, зачем хранить ссылку на объект с логином-паролем пользователя, в этом классе же авторизации нет
 
     @Override
     public void addBook(Book book) throws DaoException {
