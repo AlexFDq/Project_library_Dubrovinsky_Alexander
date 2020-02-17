@@ -17,7 +17,7 @@ public class XmlReaderDao implements ReaderDao {
     private final String READERS_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\readers.xml";
     private final String AUTH_PATH = "D:\\IntroductionToJava\\Project_library_Dubrovinsky_Alexander\\src\\main\\resources\\authorization.xml";
 
-    private List<Reader> readers = new ArrayList<>();
+    private List<Reader> readers = new ArrayList<>();// аналогично соседнему классу
     private Reader authUser;
 
     @Override
